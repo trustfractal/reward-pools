@@ -4,15 +4,7 @@ pragma solidity ^0.8.18;
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-interface IDIDRegistry {
-    function getDID(address addr)
-        external view
-        returns (string memory did);
-
-    function isDIDInList(string memory did, string memory list)
-        external view
-        returns (bool);
-}
+import "./IDIDRegistry.sol";
 
 abstract contract RewardPool {
     IDIDRegistry public didRegistry;
